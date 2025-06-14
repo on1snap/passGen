@@ -26,7 +26,7 @@ def get_credentials():
     except FileNotFoundError:
         return "No credentials saved yet."
 
-class PasswordManager(QWidget):
+class passGen(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -52,7 +52,7 @@ class PasswordManager(QWidget):
         layout.addWidget(retrieve_btn)
 
         self.setLayout(layout)
-        self.setWindowTitle('Password Manager')
+        self.setWindowTitle('passGen')
         self.setGeometry(300, 300, 400, 300)
 
     def generate_and_save_password(self):
@@ -70,7 +70,7 @@ class PasswordManager(QWidget):
 
 def main():
     app = QApplication(sys.argv)
-    ex = PasswordManager()
+    ex = passGen()
     ex.show()
     sys.exit(app.exec_())
 
